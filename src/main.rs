@@ -18,7 +18,6 @@ fn main() {
 
     if !auth_user(username.as_str(), password.as_mut_str()) {
         println!("Authorization failed! Exiting application.");
-        println!("For testing, password is now: {}", password);
         std::process::exit(0);
     }
 
