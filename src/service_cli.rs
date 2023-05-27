@@ -18,7 +18,7 @@ use crate::service_db_actions;
 /// Calls other functions that reads from sqlite services database
 fn get_suggestions(input: &str, conn: &Connection) -> Vec<String> {
     let all_services_vec = service_db_actions::read_all_rows(conn).unwrap();
-    let services_vec_regex = service_db_actions::apply_regex(&all_services_vec, format!("{}*", input).as_str());
+    let services_vec_regex = service_db_actions::apply_regex(&all_services_vec, format!("{}.*", input).as_str());
     return services_vec_regex.unwrap();
 }
 
