@@ -1,0 +1,16 @@
+[package]
+name = "project_stella"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust-argon2 = "1.0"
+zeroize = "1.6.0"
+ncurses = "5.101.0"
+rpassword = "7.2"
+rusqlite = { version = "0.29.0", features = ["bundled"] }
+regex = "1.5"
+rand = { version = "0.8.5", features = ["std"] }
+arboard = "3.2.0"
