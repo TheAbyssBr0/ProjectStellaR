@@ -60,6 +60,11 @@ pub fn auth_user(username: &str, password: &mut str) -> bool {
         if confirm_pass != password.to_string() {
             confirm_pass.zeroize();
             password.zeroize();
+
+            // clear username from auth table
+            let query = format!("DELETE FROM auth WHERE username = \"{}\"", username);
+            conn.execute(query.as_str(), ()).unwrap();
+            
             return false;
         }
         let salt = Alphanumeric.sample_string(&mut rand::thread_rng(), 16);

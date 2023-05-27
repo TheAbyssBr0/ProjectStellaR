@@ -13,7 +13,7 @@ fn main() {
     println!("Launched stellar password manager.");
 
     // Authorize
-    let username = get_visible_input_prompt("Username: ");
+    let username = get_visible_input_prompt("Username: ").trim().to_string();
     let mut password = get_hidden_input_prompt("Password: ");
 
     if !auth_user(username.as_str(), password.as_mut_str()) {
