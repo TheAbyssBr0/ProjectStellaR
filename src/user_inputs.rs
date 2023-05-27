@@ -97,10 +97,17 @@ fn get_key() -> Key {
 /// Reads from stdit
 fn get_len() -> u8 {
     let len_str = get_visible_input_prompt("> ");
-    len_str.trim().parse().unwrap_or_else(|_| {
+    let len: u8 = len_str.trim().parse().unwrap_or_else(|_| {
         println!("Failed to convert to number. Setting to default password length.");
-        16
-    })
+        return 16;
+    });
+
+    if len < 4 {
+        println!("Number too small. Password length must be >= 4. Setting default password length.");
+        return 16;
+    }
+
+    return len;
 }
 
 /// Generates a password from given parameters and copies it to clipboard
