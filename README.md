@@ -1,10 +1,10 @@
 # ProjectStellaR
 A stateless password manager that uses the Argon2 hashing algorithm for your terminal!
 
-#### Main menu
+#### Main menu screenshot
 ![image](https://github.com/TheAbyssBr0/ProjectStellaR/assets/63530018/63198fc6-34b5-4ffd-979b-346559ebbb96)
 
-#### Service auto-complete feature
+#### Service auto-complete feature screenshot
 ![image](https://github.com/TheAbyssBr0/ProjectStellaR/assets/63530018/89d963ac-8119-4f80-8dc7-0a5762a7e5e6)
 
 
@@ -40,3 +40,6 @@ Or you can download one of the precompiled binaries from the release section.
 
 ## Warning:
 This is a powerful tool and it is possible to set up a super long and complicated and weird password and then forget the initial conditions that made that password, making it irrecoverable. Don't do this. Or at least try not to.
+
+## What's with the name?
+This is loosely based on ProjectStella (deleted and forgotten) which had a similar concept to this but development halted when my fellow collaborator and I got busy with our university courses. It also had an amazing GUI (special thanks to showvikbiswas on github) which I neither have the need for or will to recreate for this version. The R kinda looks like the number 2 and it is also written purely in Rust there ProjectStellaR!
