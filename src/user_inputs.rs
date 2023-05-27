@@ -67,6 +67,13 @@ fn get_key() -> Key {
         println!("Operation failed, number of input characters incorrect. Switching key to default.");
         return Key::default();
     }
+
+    // check for all false
+    if key_str.trim().to_lowercase() == "ffff" {
+        println!("Operation failed, all cannot be false. Switching key to default.");
+        return Key::default();
+    }
+
     let mut bools: [bool; 4] = [true, true, true, true];
 
     for (index, c) in key_str.trim().chars().enumerate() {
