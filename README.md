@@ -24,6 +24,7 @@ To streamline this process, the password manager lets you select the properties 
   - this ensures that the security is on parity with more traditional password managers which also zeroize passwords after authentication.
 * Auto-complete for services
   - It will remember anything you logged into using it previously and it will suggest them if you're typing out a similar name. Press arrow keys to select and Tab to complete!
+* New users are asked for password confirmation so it should in theory catch typos so that account with wrong (and unknown) credentials cannot be made at the time of creation.
 * Runs in a terminal
 * Select password properties
   - Lengths can be anywhere between 4 and 255 although, 16 is highly recommended (it is default and you won't have to manually set it)! Any greater will most likely not be necessary but the choice is yours.
@@ -31,7 +32,7 @@ To streamline this process, the password manager lets you select the properties 
 * Password number
   - Still use Yahoo!? Did it get hacked again? That's alright just increment the password number and generate a password with this new number. It automatically becomes the default after first use and now anytime you want to retrieve your unleaked Yahoo! password, just type in Yahoo! in the services input.
 * Authentication.
-  - It will remind you if you type in your password incorrectly (or differently from the set password). 
+  - It will remind you if you type in your password incorrectly (or differently from the set password). Of course it doesn't save your password (that wouldn't be stateless) but it'll know when username and password doesn't match! 
 
 ### How do I use this password manager?
 You can compile it yourself using cargo with `$ cargo build --release` or `$ cargo run -- release` in the project home directory (binary placed in path: `./target/release`.
